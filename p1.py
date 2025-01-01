@@ -32,3 +32,9 @@ model.fit(X_train, y_train, epochs=50, batch_size=5, verbose=1)
 # Evaluating the model
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Accuracy: {accuracy}')
+
+
+predictions=model.predict(X_test)
+predicted_classes=predictions.argmax(axis=-1)
+print(f'Predicted Classes={predicted_classes}')
+
